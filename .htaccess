@@ -1,0 +1,41 @@
+<IfModule mod_rewrite.c>
+ RewriteEngine on
+#RewriteCond %{REMOTE_ADDR} !^43\.227\.132\.197
+#RewriteCond %{REMOTE_ADDR} !^45\.122\.148\.72
+#RewriteCond %{REQUEST_URI} !/maintenance.html$ [NC]
+#RewriteCond %{REQUEST_URI} !\.(jpe?g?|png|gif) [NC]
+#RewriteRule .* /maintenance.html [R=302,L]
+ RewriteRule ^srv-(.*).php$ ./restaurant.php?rest=$1
+Options -Indexes
+</IfModule>
+
+RewriteCond %{HTTP_REFERER} !^http://eatsmooth.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://eatsmooth.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.eatsmooth.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.eatsmooth.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://eatsmooth.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://eatsmooth.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.eatsmooth.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^https://www.eatsmooth.com$      [NC]
+
+ErrorDocument 404 /errors/404.html
+
+<IfModule mod_expires.c>
+  ExpiresActive on
+
+# Your document html
+  ExpiresByType text/html "access plus 0 seconds"
+
+# Media: images, video, audio
+  ExpiresByType audio/ogg "access plus 1 month"
+  ExpiresByType image/gif "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType video/mp4 "access plus 1 month"
+  ExpiresByType video/ogg "access plus 1 month"
+  ExpiresByType video/webm "access plus 1 month"
+
+# CSS and JavaScript
+  ExpiresByType application/javascript "access plus 1 month"
+  ExpiresByType text/css "access plus 1 month"
+</IfModule>

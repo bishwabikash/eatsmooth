@@ -1,0 +1,6 @@
+[28-Nov-2017 17:35:56 Asia/Kolkata] PHP Warning:  mysqli_stmt::bind_param(): invalid object or resource mysqli_stmt
+ in /home/eatsmooth/public_html/includes/enterdata.php on line 69
+[28-Nov-2017 17:35:56 Asia/Kolkata] PHP Warning:  mysqli_stmt::execute(): invalid object or resource mysqli_stmt
+ in /home/eatsmooth/public_html/includes/enterdata.php on line 70
+[28-Nov-2017 17:35:56 Asia/Kolkata] PHP Warning:  mysqli_stmt::close(): invalid object or resource mysqli_stmt
+ in /home/eatsmooth/public_html/includes/enterdata.php on line 71

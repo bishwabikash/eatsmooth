@@ -1,0 +1,88 @@
+<a class="topbar_login" href="#">
+
+                        LOGIN
+                       <span class="sf-sub-indicator"></span>
+                    </a>
+                    <div id="fast-login" class="access-info-box">
+                        <form action="includes/enterdata.php" method="post" name="loginform">
+                            <input type="hidden" name="login" value="login">
+                            <div class="form">
+                                <p>
+                                    <label>
+
+                                        <input type="text" placeholder="Username" tabindex="10" size="20" value="" name="log"
+                                               class="input-text"/>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label>
+                                        <input type="password" placeholder="Password" tabindex="20" size="20" value="" name="pwd"
+                                               class="input-text"/>
+                                    </label>
+                                </p>
+
+                                <a class="align-left lostpassword" href="#"
+                                   title="Password Lost and Found">
+                                    lost password?
+                                </a>
+
+
+                                <p class="align-right">
+                                    <input type="submit" tabindex="100" value="Login" name="wp-submit"
+                                           class="input-submit"/>
+                                    <input type="hidden" value="index.html" name="redirect_to"/>
+                                    <input type="hidden" value="1" name="testcookie"/>
+                                </p>
+
+                                <br>
+                                <a class="align-left lostpassword" href="#"
+                                   title="Password Lost and Found">
+                                    OR Login with Facebook
+                                </a>
+
+                            </div>
+                        </form>
+                        <form action="includes/enterdata.php" method="post" name="signupform" onsubmit="return validateForm()">
+                            <input type="hidden" name="signup" value="signup">
+                            <div class="form">
+                                <p>
+                                    <label>
+                                        <input type="text" placeholder="Username" tabindex="10" size="20" value="" name="log_uname"
+                                               class="input-text"/>
+                                    </label>
+                                </p>
+
+                                <p>
+                                    <label>
+                                        <input type="password" tabindex="20" placeholder="Password" size="20" value="" name="log_pwd"
+                                               class="input-text"/>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="password" placeholder="Confirm Password" tabindex="20" size="20" value="" name="log_pwd_conf"
+                                               class="input-text"/>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="tel" placeholder="Phone" tabindex="20" size="20" value="" name="log_phn"
+                                               class="input-text"/>
+                                    </label>
+                                </p>
+                                <p>
+                                    <label>
+                                        <input type="email" placeholder="Email" tabindex="20" size="20" value="" name="log_email"
+                                               class="input-text"/>
+                                    </label>
+                                </p>
+                                <p class="align-left">
+                                    <input type="reset" class="input-submit" value="Reset">
+                                </p>
+                                <p class="align-right">
+                                    <input type="submit" class="input-submit" value="Sign up">
+                                </p>
+                            </div>
+                        </form>
+                    </div>
